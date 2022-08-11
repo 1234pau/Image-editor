@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rangeInput.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="imageContainer">
+            <img src="assets/placeholder-image.png" alt="place holder" class="image">
+
+        </div>
+        <div class="file">
+            <div class="blur">
+                <h4>Blur</h4>
+                <input type="range" id="vol" class="blurClass" value="0" name="vol" min="0" max="100" disabled>
+                <span class="er blurspan">0</span>
+            </div>
+            <div class="brightness">
+                <h4>Brightness</h4>
+                <input type="range" id="vol" class="brightnessClass" value="100" name="vol" min="0" max="100" disabled>
+                <span class="er">0</span>
+            </div>
+            <div class="contrast">
+                <h4>Contrast</h4>
+                <input type="range" id="vol" class="contrastClass" value="100" name="vol" min="0" max="100" disabled>
+                <span class="er">0</span>
+            </div>
+            <div class="grayscale">
+                <h4>Grayscale</h4>
+                <input type="range" id="vol" class="grayscaleClass" value="0" name="vol" min="0" max="100" disabled>
+                <span class="er">0</span>
+            </div>
+            <div class="sepia">
+                <h4>Sepia</h4>
+                <input type="range" id="vol" class="sepiaClass" value="0" name="vol" min="0" max="100" disabled>
+                <span class="er">0</span>
+            </div>
+            <div class="invert">
+                <h4>Invert</h4>
+                <input type="range" id="vol" class="invertClass" value="0" name="vol" min="0" max="100" disabled>
+                <span class="er">0</span>
+            </div>
+            <div class="opacity">
+                <h4>Opacity</h4>
+                <input type="range" id="vol" class="opacityClass" value="100" name="vol" min="0" max="100" disabled>
+                <span class="er">0</span>
+            </div>
+            <div class="saturate">
+                <h4>Saturate</h4>
+                <input type="range" id="vol" class="saturateClass" value="1" name="vol" min="0" max="100" disabled>
+                <span class="er">0</span>
+            </div>
+
+        </div>
+
+        <div class="containerInput">
+
+
+            <input type="file" id="fileElem" multiple accept="image/*" style="display:none">
+            <button id="fileSelect">Select some files</button>
+            <button id="downloadButton" disabled>Download the files</button>
+            <button id="resetButton">Reset all</button>
+
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

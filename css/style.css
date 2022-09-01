@@ -5,21 +5,12 @@ body {
 }
 
 .container {
-    max-width: 1100px;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-}
-
-.file {
-    width: 90%;
-    height: 580px;
-    background-color: rgb(221, 221, 233);
-    border-radius: 10px;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .file div {
@@ -41,16 +32,16 @@ body {
 }
 
 .imageContainer {
-    width: 45%;
-    height: 400px;
+    width: 65%;
+    height: 60%;
     border: 2px dotted black;
-    position: absolute;
-    margin-left: 310px;
-    margin-bottom: 120px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    float: right;
+    margin-right: 50px;
+    margin-top: 50px;
 }
 
 .imageContainer img {
@@ -61,10 +52,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 350px;
-    margin-right: -616px;
-    position: absolute;
-    z-index: 1;
+    float: right;
+    margin-right: 40px;
 }
 
 .containerInput button {
@@ -79,24 +68,6 @@ body {
     cursor: pointer;
 }
 
-.containerInput #resetButton {
-    width: 130px;
-    height: 35px;
-    margin-left: -600px;
-    margin-right: 500px;
-    background-color: rgb(226, 222, 230);
-    border: 1px solid black;
-    color: black;
-    font-size: 16px;
-    border-radius: 2px;
-    cursor: pointer;
-}
-
-.containerInput #resetButton:hover {
-    background-color: rgb(194, 168, 219);
-    color: black;
-}
-
 .containerInput button:hover {
     background-color: rgb(152, 118, 184);
     font-size: 17px;
@@ -104,31 +75,70 @@ body {
 }
 
 @media screen and (max-width: 1080px) {
-    .file {
-        display: block;
-        padding-top: 1100px;
-    }
     .imageContainer {
-        width: 60%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 310px;
+        width: 90%;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .containerInput {
-        display: inline-block;
-        margin-bottom: -50px;
-        width: 60%;
+        width: 90%;
+        margin-top: 375px;
+        margin-right: 20px;
+    }
+    .containerInput button {
+        display: block;
+        max-width: 200px;
+        font-size: 12px;
+        position: relative;
+        z-index: 2;
+    }
+    .file {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        margin-top: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+    #vol {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .file {
+        grid-template-columns: auto auto auto;
+        margin-top: 400px;
         margin-left: auto;
         margin-right: auto;
     }
-    .containerInput button {
-        max-width: 100px;
-        font-size: 12px;
+}
+
+@media screen and (max-width: 550px) {
+    .imageContainer {
+        top: 15%;
     }
-    .containerInput #resetButton {
-        margin-left: 10px;
-        font-size: 12px;
-        max-width: 90px;
+    .containerInput {
+        margin-top: 310px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .file {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .file {
+        grid-template-columns: auto;
+    }
+    .file {
+        margin-top: 340px;
+    }
+    .containerInput {
+        margin-top: 290px;
     }
 }
